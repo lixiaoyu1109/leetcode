@@ -2,6 +2,8 @@ package com.lxy.leetcode;
 
 /**
  * 1302.层数最深叶子节点的和
+ * https://leetcode-cn.com/problems/deepest-leaves-sum/
+ * 
  * 深度优先遍历(dfs,栈)与广度优先遍历（bfs,队列）
  * 深度：前序 （root-left-right）,中序（left-root-right）,后序(left-right-root)
  * 
@@ -11,7 +13,7 @@ package com.lxy.leetcode;
 public class Code1302 {
 	
     public int deepestLeavesSum(TreeNode root) {
-    	// 记录层级与和
+    	// 记录最大层级与和
     	int[] record = new int[] {0, 0};
     	findLeaves(root, record, 0);
     	return record[1];
